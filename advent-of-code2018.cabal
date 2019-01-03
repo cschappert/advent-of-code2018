@@ -256,7 +256,7 @@ test-suite doctests
   --
   -- So when you finish the solution for day 1 and start working on day 2, you
   -- will replace `exe:day01` with `exe:day02`.
-  x-doctest-components: lib exe:day01
+  x-doctest-components: lib exe:day01 exe:day01p2
   type:                exitcode-stdio-1.0
   main-is:             DocTest.hs
   hs-source-dirs:      test
