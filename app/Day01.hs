@@ -46,14 +46,10 @@ main =
 mySolution :: String -> String
 mySolution = show . sum . map parseSignedInt . lines
 
-readInt :: String -> Int
-readInt = read :: String -> Int
-
 parseSignedInt :: String -> Int
 parseSignedInt [] = 0
-parseSignedInt (x:xs)
-    | x == '+' = readInt xs
-    | otherwise = negate (readInt xs)
+parseSignedInt ('-':xs) = negate (read xs)
+parseSignedInt (_:xs) = read xs
 
 -- | This is an example of using doctest.  This is easy to use to test
 -- functions you are working on.  It is much lighter weight than using
