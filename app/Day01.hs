@@ -44,7 +44,16 @@ main =
 -- This is an example of just reading in a String from stdin and reversing it.
 -- The reversed String will be output to stdout.
 mySolution :: String -> String
-mySolution inputStr = reverse inputStr
+mySolution = show . sum . map parseSignedInt . lines
+
+readInt :: String -> Int
+readInt = read :: String -> Int
+
+parseSignedInt :: String -> Int
+parseSignedInt [] = 0
+parseSignedInt (x:xs)
+    | x == '+' = readInt xs
+    | otherwise = negate (readInt xs)
 
 -- | This is an example of using doctest.  This is easy to use to test
 -- functions you are working on.  It is much lighter weight than using
