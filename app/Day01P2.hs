@@ -46,22 +46,3 @@ parseSignedInt :: String -> Int
 parseSignedInt [] = 0
 parseSignedInt ('+':xs) = read xs
 parseSignedInt xs = read xs
-
--- | This is an example of using doctest.  This is easy to use to test
--- functions you are working on.  It is much lighter weight than using
--- some sort of unit testing framework.
---
--- Basically you just write three greater than signs and an example of calling
--- the function you want to test.  Then on the next line you write what the
--- function returns.
---
--- >>> doctestExample 3
--- 13
---
--- You can run these doctests by running `stack test --fast`.
---
--- You can find out more information about doctest at the following page:
---
--- https://github.com/sol/doctest
-doctestExample :: Int -> Int
-doctestExample i = i + 10
