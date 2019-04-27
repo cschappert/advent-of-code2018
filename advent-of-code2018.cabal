@@ -45,6 +45,8 @@ library
                     , containers
                     , lens
                     , megaparsec
+                    , mtl
+                    , contravariant
                     , pretty-simple
                     , text
                     , unordered-containers

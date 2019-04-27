@@ -214,7 +214,7 @@ namesTraversal
   -- :: Traversal Name String
 namesTraversal = undefined
 
-toListOf namesTraversal ericName :: [String]
+--toListOf namesTraversal ericName :: [String]
 
 ericName :: Name
 ericName = Name "Eric" "Jelliffe"
