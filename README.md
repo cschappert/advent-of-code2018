@@ -1,8 +1,8 @@
 # Advent of Code 2018 Haskell Starter Kit with Solutions
 
 This repository is a fork of the Advent of Code 2018 Haskell Starter Kit created
-by @cdepillabout intended for use in coding competitions. The solutions
-contained in the `app` directory are written by @cschappert.
+by [Dennis Gosnell](https://github.com/cdepillabout) intended for use in coding competitions. The solutions
+contained in the `app` directory are written by [Chris Schappert](https://github.com/cschappert).
 
 The kit provides a few niceties for attempting the Advent of Code 2018 problems
 in Haskell:
