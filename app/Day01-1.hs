@@ -1,14 +1,14 @@
 
--- Here is the main module where you will implement the solution for Day 1.
+-- Here is the main module where you will implement the solution for Day 1 - Part 1.
 --
 -- You can run this file as follows:
 --
--- stack build --fast advent-of-code2018:day01
--- stack exec -- day01
+-- stack build --fast advent-of-code2018:day01-1
+-- stack exec -- day01-1
 --
--- You should be able to copy this file to another file called Day02.hs to
--- start working on the solution for Day 2.  You will also have to copy the
--- exectuable day01 section in the advent-of-code2018.cabal file.
+-- You should be able to copy this file to another file called Day01-2.hs to
+-- start working on the solution for Day 1 - Part 2.  You will also have to copy the
+-- exectuable day01-1 section in the advent-of-code2018.cabal file.
 
 module Main where
 
@@ -41,11 +41,14 @@ main =
 
 -- | This is a function that has been passed to interact above.
 --
--- This is an example of just reading in a String from stdin and reversing it.
--- The reversed String will be output to stdout.
+-- The input String is read from stdin.
+-- The result of the function application on the String will
+-- be output to stdout.
 mySolution :: String -> String
 mySolution = show . sum . map parseSignedInt . lines
 
+-- | Determine the sign of the integer by parsing the first character
+-- Empty lines will be interpreted as the integer 0
 parseSignedInt :: String -> Int
 parseSignedInt [] = 0
 parseSignedInt ('-':xs) = negate (read xs)

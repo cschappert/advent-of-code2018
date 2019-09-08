@@ -2,11 +2,11 @@ cabal-version: 1.12
 
 name:           advent-of-code2018
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/cdepillabout/advent-of-code2018#readme>
-homepage:       https://github.com/cdepillabout/advent-of-code2018#readme
-bug-reports:    https://github.com/cdepillabout/advent-of-code2018/issues
+description:    Please see the README on GitHub at <https://github.com/cschappert/advent-of-code2018#readme>
+homepage:       https://github.com/cschappert/advent-of-code2018#readme
+bug-reports:    https://github.com/cschappert/advent-of-code2018/issues
 author:         Dennis Gosnell
-maintainer:     cdep.illabout@gmail.com
+maintainer:     cn.schappert@gmail.com
 copyright:      Copyright (c) 2018 Dennis Gosnell
 license:        BSD3
 license-file:   LICENSE
@@ -23,7 +23,7 @@ custom-setup
 
 source-repository head
   type: git
-  location: https://github.com/cdepillabout/advent-of-code2018
+  location: https://github.com/cschappert/advent-of-code2018
 
 -- This is a library that can hold common code.  You may want to put any common
 -- code that you share between solutions here.  Although since this basically a
@@ -105,15 +105,15 @@ library
 --
 -- You can compile the executable with the following command:
 --
--- $ stack build --fast advent-of-code2018:day01
+-- $ stack build --fast advent-of-code2018:day01-1
 --
 -- (Or just `stack build`.)
 --
 -- You can run the executable like the following:
 --
--- $ stack exec -- day01
-executable day01
-  main-is:          Day01.hs
+-- $ stack exec -- day01-1
+executable day01-1
+  main-is:          Day01-1.hs
   hs-source-dirs:   app
   -- Commonly used libraries.
   --
@@ -177,12 +177,10 @@ executable day01
                       ViewPatterns
   default-language: Haskell2010
 
-executable day01p2
-  main-is:          Day01P2.hs
+executable day01-2
+  main-is:          Day01-2.hs
   hs-source-dirs:   app
-  -- Commonly used libraries.
-  --
-  -- Add any library dependencies you might need here.
+
   build-depends:      advent-of-code2018
                     , base >=4.11 && <5
                     , aeson
@@ -197,10 +195,7 @@ executable day01p2
                     , text
                     , unordered-containers
   ghc-options:        -threaded -rtsopts -with-rtsopts=-N -Wall -Wincomplete-record-updates -Wincomplete-uni-patterns -Wno-unused-imports -Wno-unused-top-binds
-  -- Commonly used language extensions.
-  --
-  -- Add language extensions you want to use here so it doesn't clutter the top
-  -- of your Haskell files.
+
   default-extensions: AutoDeriveTypeable
                       BangPatterns
                       BinaryLiterals
@@ -256,9 +251,9 @@ test-suite doctests
   -- only need to list the executable you are currently working on, since you
   -- don't need the doctests to be run for all your already solved exercises.
   --
-  -- So when you finish the solution for day 1 and start working on day 2, you
-  -- will replace `exe:day01` with `exe:day02`.
-  x-doctest-components: lib exe:day01 exe:day01p2
+  -- So when you finish the solution for day 1 part 1 and start working on day 2
+  -- part 2, you will replace `exe:day01-1` with `exe:day01-2`.
+  x-doctest-components: lib exe:day01-1 exe:day01-2
   type:                exitcode-stdio-1.0
   main-is:             DocTest.hs
   hs-source-dirs:      test
